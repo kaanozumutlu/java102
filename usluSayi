@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Methods1 {
+
+    static int usluSayi(int base, int ust){
+        int result=1;
+        for(int i=1; i<=ust;i++){
+            result*=base;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int n1,n2;
+        Scanner inp=new Scanner(System.in);
+        System.out.print("ustu alinacak sayi:");
+        n1= inp.nextInt();
+        System.out.print("ustlu sayi:");
+        n2= inp.nextInt();
+        int case1=usluSayi(n1,n2);
+        System.out.println(case1);
+    }
+}
