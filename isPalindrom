@@ -1,0 +1,28 @@
+//Palindrom sayi; sayi ters cevrildiginde de ayni sayiyi veren sayilardir.
+import java.util.Scanner;
+public class isPalindrom {
+
+    static boolean isPal(int number) {
+        int temp = number, reverseNumber = 0, lastNumber;
+        while (temp != 0) {//gezicek basamak kalmayinca dongu dursun
+            //son basamagi bul
+            lastNumber = temp % 10;
+            //sayiyi ters cevir
+            reverseNumber = (reverseNumber * 10) + lastNumber;
+            //bir basamak daha kay
+            temp /= 10;
+        }
+        if (number == reverseNumber) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Palindrom sorgusu icin sayi girin:");
+        int say= inp.nextInt();
+        System.out.println(isPal(say));
+    }
+}
