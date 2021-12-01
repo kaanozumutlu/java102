@@ -1,0 +1,32 @@
+//Dizideki elemanların girilen sayıdan küçük en yakın sayıyı ve en büyük en yakın sayıyı bulan programı yazınız.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] list = {15, 12, 788, 1, -1, -778, 2, 0};
+        int num, enyakinmin,enyakinmax;
+        enyakinmin = list[0];
+        enyakinmax = list[0];
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Arastirilacak sayiyi girin: ");
+        num = inp.nextInt();
+
+        for (int i : list) {
+            if (i < num) {
+                if (Math.abs(i - num) < enyakinmin) {
+                    int min = Math.abs(i - num);
+                    enyakinmin = i;}
+            }}
+        for(int k : list){
+            if (k > num) {
+                if (Math.abs(k - num) < enyakinmax) {
+                    int max = Math.abs(k - num);
+                    enyakinmax = k;}
+            }
+        }
+        System.out.println("Girilen sayi:" + num);
+        System.out.println("Girilen sayiya en yakin min:" + enyakinmin);
+        System.out.println("Girilen sayiya en yakin max:" + enyakinmax);
+    }
+}
