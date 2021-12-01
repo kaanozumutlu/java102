@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] list = {1, 2, 3, 4, 5, 44, 55};
+        double harmonik = 1.0;
+        for (int i = 0; i < list.length; i++) {
+            harmonik += 1 / list[i];
+        }
+        double result = list.length / harmonik;
+        System.out.println("Dizideki sayilarin harmonik ortalamasi: " + result);
+    }
+}
