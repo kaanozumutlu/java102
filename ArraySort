@@ -1,0 +1,29 @@
+/*dizideki elemanları küçükten büyüğe sıralayan programı yazınız.
+ Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
+ */
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Dizinin boyutunu girin: ");
+        int n = inp.nextInt();
+        int[] list = new int[n];
+        System.out.println("Dizinin boyutu: " + n);
+        int i;
+        System.out.println("Dizinin elemanlarini girin:");
+        Scanner inp2 = new Scanner(System.in);
+        for (i = 0; i <list.length; i++) {
+            list[i] = inp2.nextInt();
+            System.out.println(i + ".eleman= " + list[i]);
+        }
+        Arrays.sort(list);
+        for (int s : list) {
+            System.out.print(" " +list[s]);
+        }
+    }
+}
+
+
+
